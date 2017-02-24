@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
+    <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    <title>index - </title>
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- Hero Bloc -->
+<div id="hero-bloc" class="bloc hero l-bloc bgc-2">
+	<div class="container bloc-sm hero-nav">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"></a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav">
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="v-center text-center">
+		<div class="vc-content">
+			<br /><br /><br /><a href="index.html" class="btn btn-xl animated fadeIn btn-rd btn-glossy btn-d" data-toggle="modal" data-target="#add-name-modal">Get Started</a><a id="scroll-hero" class="btn-dwn"><span class="fa fa-chevron-down"></span></a>
+		</div>
+	</div>
+</div>
+<!-- Hero Bloc END -->
+
+<!-- bloc-2 -->
+<div class="bloc l-bloc  " id="bloc-2">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-center  mg-md" id="all-names">
+				
+				</p>
+				<div class="text-center">
+					<button id="show-names" class="btn btn-primary">Show</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- bloc-2 END -->
+
+<div class="bloc l-bloc  " id="bloc-3">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="number-row row">
+					<div class="col-sm-12">
+						<p class="number-left">50
+						</p>
+						<span>Left</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-10">
+				<div class="row">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-2">
+						<p class="showname" id="showname-0">
+							John
+						</p>
+						<button class="btn btn-warning put-back">Put Back!</button>
+					</div>
+					<div class="col-sm-2">
+						<p class="showname" id="showname-1">
+							John
+						</p>
+						<button class="btn btn-warning put-back">Put Back!</button>
+					</div>
+					<div class="col-sm-2">
+						<p class="showname" id="showname-2">
+							John
+						</p>
+						<button class="btn btn-warning put-back">Put Back!</button>
+					</div>
+					<div class="col-sm-2">
+						<p class="showname" id="showname-3">
+							John
+						</p>
+						<button class="btn btn-warning put-back">Put Back!</button>
+					</div>
+					<div class="col-sm-2">
+						<p class="showname" id="showname-4">
+							John
+						</p>
+						<button class="btn btn-warning put-back">Put Back!</button>
+					</div>
+					<div class="col-sm-1"></div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 80px;">
+			<div class="col-sm-12">
+				<button class="btn btn-success btn-lg btn-block" id="draw-btn">DRAW!</button>
+				<button class="btn btn-danger btn-lg btn-block" id="renew-btn">RENEW</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- bloc-2 -->
+<div class="bloc l-bloc  " id="bloc-4">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="one-name">
+					wgoijwe
+				</p>	
+				<div class="text-center">
+					<button class="btn btn-info btn-lg" id="draw-one-btn">Draw One!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- bloc-2 -->
+<div class="bloc l-bloc  " id="bloc-5">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-center  mg-md" id="all-names">
+				
+				</p>
+				<div class="text-center">
+					<button class="btn btn-primary" data-toggle="modal" data-target="#add-one-name-modal">Edit List</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<!-- Main container END -->
+<div class="modal" id="add-name-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h4 class="modal-title">Add Name</h4>
+      </div>
+      <div class="modal-body">
+      	
+        <div class="row">
+        	<div class="form-group">
+	      <div class="col-lg-12">
+	        <textarea class="form-control" rows="3" id="name-textarea"></textarea>
+	        <span class="help-block">add name, one for each line</span>
+	      </div>
+    	</div> 
+        </div>	
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main container END -->
+<div class="modal" id="add-one-name-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h4 class="modal-title">Add Name To List</h4>
+      </div>
+      <div class="modal-body">
+      	
+        <div class="row">
+        	<div class="form-group">
+	      <div class="col-lg-12">
+	        <textarea class="form-control name-textarea" rows="3"></textarea>
+	        <span class="help-block">add names, one for each line</span>
+	      </div>
+    	</div> 
+        </div>	
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	var names = {
+		list: ["ตื๊ด","ลำไย","หมูโจ๊ก","ซัดดัม","โฟร์","หมอยหยอง","บักแคม","ส้วม","ปี๊ป","ขี้แผ่น","ราชา","อมโบ้","ผ้าเตี่ยว","ชะอม","ท้ายสุด","ดอม","มานะ","เสียรมย์","ดึ๋ย","ตังเม","จั๊บ","ว๊าก","หนู","เน","แพค","ขี้ไก่","ขึงลึง","ลาว","ยกเซ็ต","ทองห้า","หมูยู","ฝอยทอง","ซาอุ","นัวเนีย","ดูดแล้ว","ไร้ซึ่ง","รักยม","ลันจับ","หลงทาง","จัน","จุ๋ม","เปี๊ยก","กินตับ","จ้วบ","ปูนา","เบิร์บ","เบ๊บ","จึ๋งจึ๋ย","อากง","คัมจ๋าย","วิแล","ส้มเช้ง","นุ่น","ปลาเป็น","คอติ๊ด","กี้","เด๊น"],
+		addToList: function(string){
+			this.list.push(string);
+			this.updateCount();
+		},
+		updateCount: function(){
+			$('.number-left').html(this.list.length);
+			console.log(this.list);
+		},
+		removeFromList: function(string) {
+			var index = this.list.indexOf(string);
+			this.removeFromListIndex(index);
+		},
+		removeFromListIndex: function(index){
+			if (index > -1){
+				this.list.splice(index, 1);
+				this.updateCount();
+			}
+		},
+		randomName: function() {
+			return this.list[this.randomIndex()];
+		},
+		randomIndex: function() {
+			return Math.floor(Math.random()*this.list.length)
+		},
+		takeOutOne: function() {
+			var candidateIndex = this.randomIndex();
+			var candidate = this.list[candidateIndex];
+			this.removeFromListIndex(candidateIndex);
+			return candidate;
+		}
+	};
+	$('#add-name-modal').find('[type="submit"]').on('click', function() {
+		var nameString = $('#name-textarea').val();
+		var nameList = nameString.split("\n");
+		names.list = nameList;
+		names.updateCount();
+		$('#name-textarea').val('');
+		$('#add-name-modal').modal('hide');
+	});
+
+	$('#add-one-name-modal').find('[type="submit"]').on('click', function() {
+		var nameString = $('.name-textarea').val();
+		var nameList = nameString.split("\n");
+		
+		for (var i = 0 ;i < nameList.length; i++) {
+			names.addToList(nameList[i]);
+		}
+
+		$('#name-textarea').val('');
+		$('#add-one-name-modal').modal('hide');
+	});
+
+
+
+	$('#show-names').on('click',function(){
+		var field = $('#all-names');
+		field.html(names.list.join()).show();
+		var time = Math.min(names.list.length*50,1000)
+		setTimeout(function(){
+			field.fadeOut(1000);
+		},time);
+		names.updateCount();
+	});
+
+	$('.put-back').on('click', function(){
+		var label = $(this).parent().find('.showname');
+		var putName = label.html();
+		names.addToList(putName);
+		label.html('');
+	});
+
+	$('#draw-btn').on('click', function(){
+		$('.showname').html('');
+		var round = 5;
+		for (var i=0; i<round; i++){
+
+
+			(function(id){
+				setTimeout(function(){
+				var nameOut = names.takeOutOne();
+				showName(id, nameOut);
+			},i*1000);
+			})(i);
+		}
+	});
+	var showName = function(id, name) {
+		$('#showname-'+id).shuffleNames({"text": name, "list": names});
+	}
+
+	$('#renew-btn').on('click', function() {
+		$('.showname').html('');
+	});
+
+	$('#draw-one-btn').on('click', function() {
+		$('.one-name').shuffleNames({"list": names});
+	});
+</script>
+
+<script type="text/javascript">
+$.fn.shuffleNames = function(prop){
+
+		// Handling default arguments
+		var options = $.extend({
+			// Default arguments
+			"loop" : 85,
+			"text" : '',
+			"list" : [],
+			"rate" : 2,
+			"rateFunction" : function(rate){
+				var beforeSlow = options.loop - (Math.floor(Math.random()*5)+10);
+				if (rate < beforeSlow) return rate;
+				return ((rate-beforeSlow)*20) + beforeSlow
+			}
+		},prop)
+		// options.rate = options.loop;
+		return this.each(function(){
+			// The main plugin code goes here
+			var text = $(this);
+			var finalStr = options.text;
+			(function shuffle(time){
+				if (time <= 0) { 
+					if (options.text){
+						text.html(finalStr); 
+					} else {
+						var nameOut = options.list.takeOutOne();
+						text.html(nameOut);
+					}
+					return;
+				}
+				var next = options.list.randomName();
+				text.html(next);
+				(function(rate){
+					setTimeout(function(){
+						shuffle(time - 1);
+						// console.log(rate);
+					}, rate);
+				})(options.rateFunction(options.rate++));
+			})(options.loop)
+			
+		});
+	};
+
+</script>
+
+</body>
+    
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
+</html>
